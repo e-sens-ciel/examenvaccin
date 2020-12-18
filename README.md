@@ -36,16 +36,34 @@ Les réponses peuvent être subjectives si il y a le signe **(s)** à la fin de 
 Vous pouvez répondre à même ce document ou dans un fichier à part.
 
 - Qu'est-ce que JavaScript vanilla ?
-- Qu'est-ce qu'AJAX ?
-- Pourquoi JavaScript est parfois mal-aimé des devs ? **(s)**
-- Y a-t-il des types en JavaScript ? Si oui, lesquels ?
-- Est-ce que SASS est un langage qui est interprété par les navigateurs ?
-- Pourquoi peut-on dire que JavaScript est un langage "multi-paradigmes" ? **(s)**
-- En JS, une fonction peut-elle retourner une fonction ?
-- Est-ce que `alert` existe en Node.JS ?
-- Est-ce que `window.console.log === console.log` dans le navigateur ?
-- Quel est votre aspect préféré de JavaScript ? **(s)**
+JavaScript vanilla est un gramework rapide et léger avec lequel on peut créer de puissantes et incroyables applications JavaScript. Il est utilisé par les grands comme facebook,twitter,amazon,linkedin,ebay etc etc... La puissance et la vitesse de ce framework est incomparable avec les autres frameworks. On dit qu'il est le framework JavaScript le plus utilisé au monde.
+On peut gérer la gestion du DOM, de canvas, il est souple,léger, complet et pèse peu(25bytes). 
 
+- Qu'est-ce qu'AJAX ?
+AJAX est une API web présente dans JavaScript qui permet de faire des requêtes HTTP sans devoir recharger la page web. Exemple: lorsqu'on veut afficher la liste complète de ses amis, nous n'avons pas besoin de recharger pour ce faire. AJAX(Asychronous JavaScript and XML) ne porte pas bien son nom, car il peut envoyer et recevoir autre chose que du XML, c'est à dire du JSON aussi.
+
+- Pourquoi JavaScript est parfois mal-aimé des devs ? **(s)**
+Le JavaScript est un langage différents des langages comme c#, java ou c++ ... Il peut être
+mal aimé, car il est fait de différences comme le typage qui est dynamique, la sémantique du mot clé this est différente, il y a de l'omni-présence de l'asynchrone, c'est une programmation fonctionnelle et la portée des variables est étendue aux fonctions et non aux blocs. Il fait des conversions bizzares, les variables globales sont par défaut et il n'y a pas d'espace de nommage.
+
+- Y a-t-il des types en JavaScript ? Si oui, lesquels ?
+Oui mais il n'a que 6 types. Objet , number, string, boolean, null et undefined. Les types null et undefined sont des types spéciaux. 
+
+- Est-ce que SASS est un langage qui est interprété par les navigateurs ?
+SASS n'est pas un langage. C'est un préprocesseur CSS, une technologie qiu améliore le code base et nous simplifie le travail.
+Grâce à la compilation, nous pourrons transformer SASS en CSS traditionnel car le navigateur est incapable de comprendre SASS. Il faut donc traduire la syntaxe de SASS en CSS pour que le navigateur puisse l'utiliser(compilation).
+- Pourquoi peut-on dire que JavaScript est un langage "multi-paradigmes" ? **(s)**
+On dit qu'il est multi-paradigme, car il supporte le paradigme objet, impératif et fonctionnel.
+Par exemple depuis ES6 il existe en JavaScript, des classes. En fonction du problème à résoudre, il est possible de travailler avec un paradigme ou un autre.
+- En JS, une fonction peut-elle retourner une fonction ?
+Oui, une fonction peut retourner une fonction.
+En JavaScript, une fonction est de première classe. Elle peut être traîtée comme un type primitif ou un objet. 
+- Est-ce que `alert` existe en Node.JS ?
+Alert est une méthode de window. En node JS il y a un module npm connu sous le nom de "popups" qui peut être utilisé pour faire un popup.alert. 
+- Est-ce que `window.console.log === console.log` dans le navigateur ?
+`window.console.log === console.log` retournent true. Window est un objet qui est présent côté navigateur. Il contient pleins de choses. On utilise ce qu'il contient sans citer "window".
+- Quel est votre aspect préféré de JavaScript ? **(s)**
+J'ai d'abord découvert JAVA et c#, donc au début JavaScript m'a fait assez peur. Mais au fur et à mesure, au plus j'apprends à le connaître, au plus je commence à apprécier. Il offre une certain flexibilité à manipuler les données, il peut être utilisé en front-end et en back-end(node js). Je le trouve facile à apprendre, c'est un langage puissant, car il est multi-paradigme et il permet de créer des sites dynamiques, c'est ce que j'aime le plus dans ce langage. 
 ## Épreuve pratique sur 80pts
 Vous êtes codeuse/codeur JavaScript dans une clinique du centre-ville.
 Vous développez un outil de pré-commande de vaccins dans les stocks publics de la ville, pour les responsables d'équipes médicales.
@@ -127,7 +145,8 @@ Les éléments suivants sont créés dans la div `#app` via JavaScript:
 - un élément `footer` résume la commande en cours (vide au début), et contient un bouton "passer la commande"
 
 ### Manipulation du DOM et interaction utilisateur
-- Lorsque l'utilisateur clique sur "cacher les vaccins non approuvés" les vaccins non approuvés sont cachés. On peut désormais les re-montrer grâce au même bouton
+- Lorsque l'utilisateur clique sur "cacher les vaccins non approuvés" les vaccins non approuvés sont cachés. On peut désormais 
+les re-montrer grâce au même bouton
 - Lorsqu'un utilisateur clique sur le bouton "réserver" d'une carte de vaccin
   - le vaccin apparaît dans la commande du `footer`, avec la quantité demandée (ex: Tozinameran x3)
   - l'input de quantité disparaît de la carte
