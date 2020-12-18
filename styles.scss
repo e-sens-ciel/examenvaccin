@@ -14,9 +14,10 @@ body {
   justify-content: space-around;
 }
 }
-h1 {
+h1{
   text-align: center;
 }
+
 .vac {
   width: 400px;
   text-align: left;
@@ -27,4 +28,13 @@ h1 {
 img {
   margin:auto;
   height: 200px;
+}
+
+footer {
+  text-align: center;
+  width: auto;
+  text-align: left;
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid blue;
 }

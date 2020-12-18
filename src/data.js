@@ -6,7 +6,7 @@ export const vaccins = [
     technologie: 'virus inactivé',
     quantite: 420,
     prixUnitaire: '17$',
-    approuve: 'oui',
+    approuve: true,
     image: 'bbibp-corv.jpg',
   },
   {
@@ -16,7 +16,7 @@ export const vaccins = [
     technologie: 'adenovirus',
     quantite: 130,
     prixUnitaire: '12$',
-    approuve: 'non',
+    approuve: false,
     image: 'sputnik-v.jpg',
   },
   {
@@ -26,7 +26,7 @@ export const vaccins = [
     technologie: 'adenovirus',
     quantite: 5028,
     prixUnitaire: '1.78$',
-    approuve: 'non',
+    approuve: false,
     image: 'azd1222.jpg',
   },
   {
@@ -36,7 +36,7 @@ export const vaccins = [
     technologie: 'ARN messager',
     quantite: 980,
     prixUnitaire: '14$',
-    approuve: 'oui',
+    approuve: true,
     image: 'tozinameran.jpg',
   },
   {
@@ -46,7 +46,7 @@ export const vaccins = [
     technologie: 'ARN messager',
     quantite: 240,
     prixUnitaire: '28$',
-    approuve: 'non',
+    approuve: false,
     image: 'mrna-1273.jpg',
   },
   {
@@ -56,7 +56,7 @@ export const vaccins = [
     technologie: 'adenovirus ',
     quantite: 110,
     prixUnitaire: '31$',
-    approuve: 'non',
+    approuve: false,
     image: 'ad26-cov2-s.jpg',
   },
 ];
