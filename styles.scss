@@ -8,4 +8,23 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100%;
+  .flex {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+}
+h1 {
+  text-align: center;
+}
+.vac {
+  width: 400px;
+  text-align: left;
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid blue;
+}
+img {
+  margin:auto;
+  height: 200px;
 }

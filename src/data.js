@@ -7,6 +7,7 @@ export const vaccins = [
     quantite: 420,
     prixUnitaire: '17$',
     approuve: 'oui',
+    image: 'bbibp-corv.jpg',
   },
   {
     nom: 'Sputnik V',
@@ -16,6 +17,7 @@ export const vaccins = [
     quantite: 130,
     prixUnitaire: '12$',
     approuve: 'non',
+    image: 'sputnik-v.jpg',
   },
   {
     nom: 'AZD1222',
@@ -25,6 +27,7 @@ export const vaccins = [
     quantite: 5028,
     prixUnitaire: '1.78$',
     approuve: 'non',
+    image: 'azd1222.jpg',
   },
   {
     nom: 'Tozinameran',
@@ -34,6 +37,7 @@ export const vaccins = [
     quantite: 980,
     prixUnitaire: '14$',
     approuve: 'oui',
+    image: 'tozinameran.jpg',
   },
   {
     nom: 'mRNA-1273',
@@ -43,6 +47,7 @@ export const vaccins = [
     quantite: 240,
     prixUnitaire: '28$',
     approuve: 'non',
+    image: 'mrna-1273.jpg',
   },
   {
     nom: 'Ad26.COV2.S',
@@ -52,5 +57,6 @@ export const vaccins = [
     quantite: 110,
     prixUnitaire: '31$',
     approuve: 'non',
+    image: 'ad26-cov2-s.jpg',
   },
 ];
