@@ -1,8 +1,6 @@
 import './styles.scss';
 import { vaccins } from './src/data';
 
-console.log(vaccins); // A SUPPRIMER
-
 const app = document.getElementById('app');
 
 function render() {
@@ -14,7 +12,6 @@ function render() {
 
   for (let i = 0; i < vaccins.length; i++) {
     main += `
-      
       <article class="vac">
             <img src="images/${vaccins[i].image}"/><br />
             <h2>${vaccins[i].nom}</h2>
@@ -25,10 +22,9 @@ function render() {
              Quantité : ${vaccins[i].quantite} <br />
              Prix unitaire : ${vaccins[i].prixUnitaire} <br />
              Approuvé : <i id="${i}" class="${vaccins[i].approuve ? 'vacApprouver' : 'vacNonApprouver'}">${vaccins[i].approuve}</i> <br />      
-
             <label for="quantite">Quantité (minimum 1 vaccin):</label>
-            <input type="number" id="quantite" name="quantite" min="1" >
-            <input type="submit" value="réserver">
+            <input type="number" id="quantite" class="inputQuantite" name="quantite" min="1" >
+            <input type="submit" id="${i}" class="btnreserver" value="réserver">
             </p>
       </article>`;
   }
@@ -38,17 +34,38 @@ function render() {
   // Footer
   let footer = '<footer>';
   footer
-    += '<h2>Résumer de la commande</h2><button>Passer la commande</button>';
+    += '<h2>Résumer de la commande</h2><button class="btnPasserCommande">Passer la commande</button> <br />';
   footer += '</footer>';
   app.innerHTML += footer;
 }
 render();
 
+function ChangerTexteBouton() {
+  document.querySelector('.btnvaccinNonApprouve').innerText = 'Afficher les vaccins non approuvés';
+}
+
 document.body.addEventListener('click', (e) => {
   if (e.target.matches('.btnvaccinNonApprouve')) {
     const visibleToCacher = document.querySelectorAll('.vacNonApprouver');
     for (const el of visibleToCacher) {
-      el.parentNode.parentNode.style.display = 'none';
+      el.parentNode.parentNode.style.visibility = 'hidden';
+      ChangerTexteBouton();
     }
+  }
+  if (e.target.matches('.btnreserver')) {
+    const { id } = e.target;
+    const footer = document.querySelector('footer');
+    const inputs = document.querySelectorAll('.inputQuantite');
+    const nombreFinalVaccin = inputs[id].value;
+    console.log(nombreFinalVaccin);
+    footer.innerHTML += `Nom du vaccin : ${vaccins[id].nom} Quantité : ${nombreFinalVaccin} <br /> `;
+    const btnReserver = document.querySelectorAll('.btnreserver');
+    for (let i = 0; i < btnReserver.length; i++) {
+      btnReserver[id].disabled = true;
+    }
+  }
+  if (e.target.matches('.btnPasserCommande')) {
+    app.innerHTML = '';
+    app.innerHTML = 'La commande a bien été enregistrée... Merci de votre achat!';
   }
 });
