@@ -49,9 +49,16 @@ document.body.addEventListener('click', (e) => {
     const visibleToCacher = document.querySelectorAll('.vacNonApprouver');
     for (const el of visibleToCacher) {
       el.parentNode.parentNode.style.visibility = 'hidden';
+      el.parentNode.parentNode.classList.add('aAfficher');
       ChangerTexteBouton();
     }
   }
+  // if (document.getElementsByClassName('.aAfficher')) {
+  //   const articles = document.querySelectorAll('.vacNonApprouver');
+  //   for (const el of articles) {
+  //     el.parentNode.parentNode.style.visibility = 'visible';
+  //   }
+  // }
   if (e.target.matches('.btnreserver')) {
     const { id } = e.target;
     const footer = document.querySelector('footer');
